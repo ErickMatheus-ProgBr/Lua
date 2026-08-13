@@ -1,6 +1,8 @@
 import 'package:applua/core/theme/theme_text.dart';
+import 'package:applua/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 import 'package:applua/core/theme/theme_colors.dart';
+import 'package:applua/core/utils/media_query.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -20,23 +22,30 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset("assets/images/logoApp.png"),
+              Image.asset(
+                "assets/images/logoApp.png",
+                height: context.height * 0.24,
+                width: context.width * 0.9,
+              ),
               Text(
                 textAlign: TextAlign.center,
-                "O maior aplicatico para encontrar seu pet perdido.",
+                "O maior aplicativo para encontrar seu pet perdido.",
                 style: TextStyle(color: ThemeText.white, fontSize: 50),
               ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 13),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "Começar",
-                  style: TextStyle(
-                    color: ThemeColors.primary,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+              SizedBox(
+                width: (context.width * 0.8),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 100, vertical: 13),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "Começar",
+                    style: TextStyle(
+                      color: ThemeColors.primary,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
