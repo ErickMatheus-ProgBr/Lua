@@ -5,4 +5,6 @@ class ThemeColors {
 
   // Roxo do fundo da tela de Boas-Vindas
   static const Color primary = Color(0xFF5D33AF);
+
+  static const Color secundary = Color(0xFFFEFDFD);
 }
