@@ -2,7 +2,6 @@ import 'package:applua/core/theme/theme_text.dart';
 import 'package:applua/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 import 'package:applua/core/theme/theme_colors.dart';
-import 'package:applua/core/utils/media_query.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -38,7 +37,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 100, vertical: 13),
                   ),
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushNamed(context, "/login"),
                   child: Text(
                     "Começar",
                     style: TextStyle(
