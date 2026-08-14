@@ -1,5 +1,6 @@
 // lib/app/routes/app_routes.dart
 
+import 'package:applua/features/auth/presentation/pages/createAccount.dart';
 import 'package:applua/features/auth/presentation/pages/home_screen.dart';
 import 'package:applua/features/auth/presentation/pages/login_screen.dart';
 import 'package:applua/features/auth/presentation/pages/welcome_screen.dart';
@@ -13,6 +14,7 @@ abstract class AppRoutes {
   static const String welcome = '/welcome';
   static const String home = '/home';
   static const String login = '/login';
+  static const String createAccount = "/createAccount";
 
   /// Mapeamento das rotas do app (Chave = Caminho em texto, Valor = Função que constrói a tela).
   /// O '(context) => Tela()' garante que a tela só seja carregada na memória no momento em que for aberta.
@@ -20,5 +22,6 @@ abstract class AppRoutes {
     welcome: (context) => const WelcomeScreen(),
     home: (context) => const HomeScreen(),
     login: (context) => const LoginScreen(),
+    createAccount: (context) => const Createaccount(),
   };
 }
