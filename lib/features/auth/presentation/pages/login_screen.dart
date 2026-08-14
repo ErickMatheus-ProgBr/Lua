@@ -21,29 +21,32 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: ThemeColors.secundary,
       body: Container(
         margin: EdgeInsets.symmetric(
-          horizontal: context.width * 0.1,
+          horizontal: context.width * 0.06,
           vertical: context.height * 0.15,
         ),
 
-        // width: context.width * 0.8,
-        // height: context.height * 2, //
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Que bom ter você aqui!",
               style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
-            ), //
+            ),
+            SizedBox(height: context.height * 0.01),
             Text(
               "Faça login para continuar",
               style: TextStyle(color: Colors.black, fontSize: 21.5, fontWeight: FontWeight.w500),
             ),
+
+            SizedBox(height: context.height * 0.05),
 
             Image.asset(
               "assets/images/petsAuth.png",
               height: context.height * 0.24,
               width: context.width * 0.9,
             ),
+
+            SizedBox(height: context.height * 0.06),
 
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -73,6 +76,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
+
+            SizedBox(height: context.height * 0.030),
+
             Row(
               children: [
                 Expanded(child: Divider(color: Colors.grey, thickness: 1)), //
@@ -87,6 +93,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 20),
               ],
             ),
+
+            SizedBox(height: context.height * 0.030),
+
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: ThemeColors.primary,
@@ -103,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   //
                   Text(
-                    "Criar conta com E-mail",
+                    "Criar conta com e-mail",
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,
@@ -115,6 +124,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
+
+            SizedBox(height: context.height * 0.003),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
