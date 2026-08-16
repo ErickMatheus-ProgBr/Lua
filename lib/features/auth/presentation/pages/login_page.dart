@@ -1,18 +1,34 @@
+import 'package:applua/core/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<Login> createState() => _LoginState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.black,
-      body: Text("Faça seu login", style: TextStyle(color: Colors.white)),
+      backgroundColor: ThemeColors.secundary,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                Image(
+                  image: AssetImage(
+                    "assets/images/imageLogin.png", //
+                  ),
+                ),
+                Text("Que bom te ver de noovo!"),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

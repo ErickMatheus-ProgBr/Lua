@@ -171,7 +171,7 @@ class _CreateaccountState extends State<Createaccount> {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, "/loginpage");
+                          Navigator.pushNamed(context, "/login");
                         },
                         child: Text(
                           "Entrar",

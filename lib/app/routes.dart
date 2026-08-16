@@ -3,6 +3,7 @@
 import 'package:applua/features/auth/presentation/pages/createAccount.dart';
 import 'package:applua/features/auth/presentation/pages/home_screen.dart';
 import 'package:applua/features/auth/presentation/pages/login_page.dart';
+import 'package:applua/features/auth/presentation/pages/login_options.dart';
 import 'package:applua/features/auth/presentation/pages/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,8 @@ abstract class AppRoutes {
   static const String initial = '/';
   static const String welcome = '/welcome';
   static const String home = '/home';
-  static const String login = '/loginpage';
+  static const String login = '/login';
+  static const String loginoptions = '/loginOptions';
   static const String createAccount = "/createAccount";
 
   /// Mapeamento das rotas do app (Chave = Caminho em texto, Valor = Função que constrói a tela).
@@ -21,7 +23,8 @@ abstract class AppRoutes {
   static Map<String, WidgetBuilder> get routes => {
     welcome: (context) => const WelcomeScreen(),
     home: (context) => const HomeScreen(),
-    login: (context) => const LoginPage(),
+    login: (context) => const Login(),
+    loginoptions: (context) => const LoginOptions(),
     createAccount: (context) => const Createaccount(),
   };
 }

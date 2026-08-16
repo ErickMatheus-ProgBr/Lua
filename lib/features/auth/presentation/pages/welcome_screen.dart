@@ -37,7 +37,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 100, vertical: 13),
                   ),
-                  onPressed: () => Navigator.pushNamed(context, "/login"),
+                  onPressed: () => Navigator.pushNamed(context, "/loginOptions"),
                   child: Text(
                     "Começar",
                     style: TextStyle(

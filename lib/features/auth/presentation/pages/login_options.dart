@@ -7,14 +7,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginOptions extends StatefulWidget {
+  const LoginOptions({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<LoginOptions> createState() => _LoginOptionsState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginOptionsState extends State<LoginOptions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,7 +139,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/login");
+                    },
                     child: Text(
                       "Entrar",
                       style: TextStyle(
