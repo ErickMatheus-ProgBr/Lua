@@ -120,7 +120,7 @@ class _CreateaccountState extends State<Createaccount> {
                           style: ElevatedButton.styleFrom(
                             elevation: 3,
                             backgroundColor: ThemeColors.primary,
-                            minimumSize: const Size(double.infinity, 50),
+                            minimumSize: const Size(double.infinity, 56),
                             maximumSize: const Size(double.infinity, double.infinity),
                             alignment: Alignment.center,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
@@ -144,7 +144,10 @@ class _CreateaccountState extends State<Createaccount> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Já tem uma conta?", style: TextStyle(fontSize: 17)),
+                      Text(
+                        "Já tem uma conta?",
+                        style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
+                      ),
                       TextButton(
                         onPressed: () {},
                         child: Text(
