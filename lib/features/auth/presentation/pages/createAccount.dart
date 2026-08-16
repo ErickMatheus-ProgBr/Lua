@@ -16,6 +16,8 @@ class _CreateaccountState extends State<Createaccount> {
   final _confirmPassWord = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
+  bool _obscurePassword = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,11 +88,20 @@ class _CreateaccountState extends State<Createaccount> {
                         TextFormField(
                           controller: _password,
                           keyboardType: TextInputType.text,
-                          obscureText: true,
+                          obscureText: _obscurePassword,
 
-                          decoration: const InputDecoration(
-                            prefixIcon: Icon(Icons.lock),
-                            border: OutlineInputBorder(
+                          decoration: InputDecoration(
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _obscurePassword = !_obscurePassword;
+                                });
+                              },
+                            ),
+                            border: const OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(10)),
                             ),
                           ),
@@ -106,9 +117,19 @@ class _CreateaccountState extends State<Createaccount> {
                         TextFormField(
                           controller: _confirmPassWord,
                           keyboardType: TextInputType.text,
-                          obscureText: true,
-                          decoration: const InputDecoration(
-                            border: OutlineInputBorder(
+                          obscureText: _obscurePassword,
+                          decoration: InputDecoration(
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _obscurePassword = !_obscurePassword;
+                                });
+                              },
+                            ),
+                            border: const OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(10)),
                             ),
                           ),
