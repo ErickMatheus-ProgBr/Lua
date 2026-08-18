@@ -21,11 +21,10 @@ class _LoginOptionsState extends State<LoginOptions> {
       backgroundColor: ThemeColors.secundary,
       body: Expanded(
         child: Container(
-          margin: EdgeInsets.symmetric(
+          padding: EdgeInsets.symmetric(
             horizontal: context.width * 0.06,
-            vertical: context.height * 0.15,
+            vertical: context.height * 0.05,
           ),
-
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -78,8 +77,7 @@ class _LoginOptionsState extends State<LoginOptions> {
                 ),
               ),
 
-              SizedBox(height: context.height * 0.030),
-
+              SizedBox(height: context.height * 0.020),
               Row(
                 children: [
                   Expanded(child: Divider(color: Colors.grey, thickness: 1)), //
@@ -99,7 +97,7 @@ class _LoginOptionsState extends State<LoginOptions> {
                 ],
               ),
 
-              SizedBox(height: context.height * 0.030),
+              SizedBox(height: context.height * 0.020),
 
               ElevatedButton(
                 style: ElevatedButton.styleFrom(

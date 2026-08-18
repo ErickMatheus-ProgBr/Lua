@@ -4,6 +4,7 @@ import 'package:applua/features/auth/presentation/pages/createAccount.dart';
 import 'package:applua/features/auth/presentation/pages/home_screen.dart';
 import 'package:applua/features/auth/presentation/pages/login_page.dart';
 import 'package:applua/features/auth/presentation/pages/login_options.dart';
+import 'package:applua/features/auth/presentation/pages/quickTutorial.dart';
 import 'package:applua/features/auth/presentation/pages/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ abstract class AppRoutes {
   static const String login = '/login';
   static const String loginoptions = '/loginOptions';
   static const String createAccount = "/createAccount";
+  static const String quickTutorial = "/tutorial";
 
   /// Mapeamento das rotas do app (Chave = Caminho em texto, Valor = Função que constrói a tela).
   /// O '(context) => Tela()' garante que a tela só seja carregada na memória no momento em que for aberta.
@@ -26,5 +28,6 @@ abstract class AppRoutes {
     login: (context) => const Login(),
     loginoptions: (context) => const LoginOptions(),
     createAccount: (context) => const Createaccount(),
+    quickTutorial: (context) => const Quicktutorial(),
   };
 }
