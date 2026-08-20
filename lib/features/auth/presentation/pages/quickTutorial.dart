@@ -13,19 +13,19 @@ class Quicktutorial extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: EdgeInsets.symmetric(
-              vertical: context.height * 0.04,
+              vertical: context.height * 0.09,
               horizontal: context.width * 0.06,
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               // mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Como funciona", style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700)),
+                Text("Como funciona", style: TextStyle(fontSize: 33, fontWeight: FontWeight.w700)),
                 SizedBox(height: 34),
                 _buildlistTile(),
+                SizedBox(height: 64),
                 _buildNexts(),
-                SizedBox(height: 34),
               ],
             ),
           ),
@@ -41,18 +41,22 @@ Widget _buildlistTile() {
     children: [
       ListTile(
         leading: CircleAvatar(
-          radius: 30,
+          radius: 35,
           // ignore: sort_child_properties_last
           child: Stack(children: [Icon(Icons.location_on_outlined, size: 33, color: Colors.white)]),
 
           backgroundColor: Color(0xFF8763CF), //
         ),
         title: const Text("Encontre", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700)),
-        subtitle: Text("Veja pets perdidos na sua região", style: TextStyle(fontSize: 18)),
+        subtitle: Text(
+          "Veja pets perdidos na sua região",
+          style: TextStyle(fontSize: 19, fontWeight: FontWeight.w400),
+        ),
       ),
+      SizedBox(height: 30),
       ListTile(
         leading: CircleAvatar(
-          radius: 30,
+          radius: 35,
 
           backgroundColor: Color(0xFF8763CF),
           child: Stack(
@@ -62,14 +66,17 @@ Widget _buildlistTile() {
         title: const Text("Anuncie", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700)),
         subtitle: Text(
           "Publique um pet que você encontrou ou perdeu",
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: 19, fontWeight: FontWeight.w400),
         ),
       ),
+      SizedBox(height: 30),
+
       ListTile(
         leading: CircleAvatar(
-          radius: 30,
+          radius: 35,
 
           backgroundColor: Color(0xFF8763CF), //
+          child: Stack(children: [Icon(Icons.share_outlined, color: Colors.white, size: 33)]),
         ),
         title: const Text(
           "Compartilhe",
@@ -77,7 +84,7 @@ Widget _buildlistTile() {
         ),
         subtitle: Text(
           "Ajude a espalhar para reunir familias.",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+          style: TextStyle(fontSize: 19, fontWeight: FontWeight.w400),
         ),
       ),
     ],
@@ -97,7 +104,7 @@ Widget _buildNexts() {
         onPressed: () {},
         child: Text("Entendi!", style: TextStyle(color: ThemeColors.secundary, fontSize: 18)),
       ),
-      SizedBox(height: 15),
+      SizedBox(height: 20),
       TextButton(
         onPressed: () {},
         child: Align(
