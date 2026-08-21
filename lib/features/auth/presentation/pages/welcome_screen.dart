@@ -28,8 +28,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
               Text(
                 textAlign: TextAlign.center,
-                "O maior aplicativo para encontrar seu pet perdido.",
-                style: TextStyle(color: ThemeText.white, fontSize: 50),
+                "Conectando pessoas para reunir pets e famílias.",
+                style: TextStyle(color: ThemeText.white, fontSize: 35),
+              ),
+              Text(
+                textAlign: TextAlign.center,
+                "Juntos aumentamos as chances de reencontro.",
+                style: TextStyle(color: const Color.fromARGB(255, 196, 189, 199), fontSize: 29),
               ),
               SizedBox(
                 width: (context.width * 0.8),
