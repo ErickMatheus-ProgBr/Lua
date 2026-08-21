@@ -14,6 +14,8 @@ class LoginOptions extends StatefulWidget {
   State<LoginOptions> createState() => _LoginOptionsState();
 }
 
+bool _isLoading = false;
+
 class _LoginOptionsState extends State<LoginOptions> {
   @override
   Widget build(BuildContext context) {
@@ -108,7 +110,21 @@ class _LoginOptionsState extends State<LoginOptions> {
                     borderRadius: BorderRadiusGeometry.all(Radius.circular(14)),
                   ),
                 ),
-                onPressed: () => Navigator.pushNamed(context, "/createAccount"), //
+                onPressed: _isLoading
+                    ? null
+                    : () async {
+                        setState(() {
+                          _isLoading = true;
+                        });
+
+                        await Future.delayed(const Duration(seconds: 2));
+
+                        if (!mounted) return;
+
+                        setState(() {
+                          _isLoading = false;
+                        });
+                      }, //
 
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
